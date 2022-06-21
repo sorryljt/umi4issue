@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>房金融后台</title>
+    <link rel="stylesheet" href="/umi.css" />
+    <script>
+      window.routerBase = "/super/system/fangjr";
+    </script>
+    <script>
+      window.publicPath = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__ || "/";
+    </script>
+    <script>
+      //! umi version: 3.5.20
+    </script>
+  </head>
+  <body>
+    <script src="https://j1.58cdn.com.cn/beidou-sdk/browser/bundle.min.js"></script>
+    <script>
+      Beidou.init({
+        projectId: 533, // 必传 ，在58北斗监控平台添加项目时，生成的项目ID
+      });
+    </script>
+    <script src="//j1.58cdn.com.cn/jinrong/fang_b/bms/wos-js-sdk-v2.js"></script>
+    <div id="root"></div>
+
+    <script src="/umi.js" entry=""></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+/**
+ * 生成基于SVG的一像素图片作为border-image.
+ * @param  {color}border-color
+ * @parma  {unit}bordel-width
+ */
+ .mix-svg-border-img (@border-color:#e7ecf0, @border-width:1px 0 0 0, @bgColor: none) {
+  @svg-cont: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="6px" height="6px"><rect x="0.5" y="0.5" width="5" height="5" rx="0" ry="0" stroke="@{border-color}" fill="@{bgColor}"/></svg>';
+  border-width: @border-width;
+  border-style: solid;
+  border-color: #e7ecf0;
+  border-image: url(@svg-cont) 2 stretch;
+}
+
+// 右箭头
+@svg-arrow-right: 'data:image/svg+xml;utf8,%3Csvg%20width%3D%2225px%22%20height%3D%2225px%22%20viewBox%3D%220%200%2025%2025%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23CCCCCC%22%20fill-rule%3D%22nonzero%22%3E%3Cpath%20d%3D%22M7.47894799%2C5.55111789%20C6.929267%2C4.96751439%206.929267%2C4.0213062%207.47894799%2C3.4377026%20C8.02862797%2C2.8540991%208.91983595%2C2.8540991%209.46951694%2C3.4377026%20L16.3128988%2C10.7034191%20C17.2290337%2C11.6760916%2017.2290337%2C13.2531054%2016.3128988%2C14.2257779%20L9.40282894%2C21.5622974%20C8.85314895%2C22.1459008%207.96194098%2C22.1459008%207.41225999%2C21.5622974%20C6.86258%2C20.9786938%206.86258%2C20.0324856%207.41225999%2C19.4488821%20L13.9905688%2C12.4645985%20L7.47894799%2C5.55111789%20Z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E';
+
+//主色
+@color-main: #FF7339;
+
+.mix-triangle( @direction:2, @color:#A3ADB6 ) {
+    @h: 10px;
+    @w: 16px;
+    display: inline-block;
+    content: '';
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+
+    & when ( @direction = 0) {
+        margin-left: 12px;
+        margin-bottom: 4px;
+        border-bottom: solid @color @h;
+        border-left: solid transparent @w/2;
+        border-right: solid transparent @w/2;
+    }
+
+    & when ( @direction = 1) {
+        margin-left: 12px;
+        margin-bottom: 2px;
+        border-top: solid transparent @w/2;
+        border-left: solid @color @h;
+        border-bottom: solid transparent @w/2;
+    }
+
+    & when ( @direction = 2) {
+        margin-left: 12px;
+        margin-bottom: 4px;
+        border-top: solid @color @h;
+        border-left: solid transparent @w/2;
+        border-right: solid transparent @w/2;
+    }
+
+    & when ( @direction = 3) {
+        margin-right: 12px;
+        margin-bottom: 2px;
+        border-top: solid transparent @w/2;
+        border-right: solid @color @h;
+        border-bottom: solid transparent @w/2;
+    }
+}
