@@ -11,11 +11,11 @@ export default defineConfig({
   initialState: {},
   mock: false,
   dva: {},
-  // layout: {
-  //   locale: false,
-  //   siderWidth: 218,
-  //   ...defaultSettings,
-  // },
+  layout: {
+    locale: false,
+    siderWidth: 218,
+    ...defaultSettings,
+  },
   locale: {
     default: 'zh-CN',
     antd: true,

@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@umijs/max": "^4.0.0",
-    "@ant-design/pro-layout": "^5.0.12",
+    "@ant-design/pro-layout": "next",
     "@babel/polyfill": "^7.12.1",
     "@designable/shared": "^1.0.0-beta.45",
     "@testing-library/jest-dom": "^5.16.4",
@@ -30,8 +30,7 @@
     "qrcode.react": "^1.0.1",
     "qs": "^6.9.4",
     "query-string": "^6.13.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^18.1.0",
     "umi-request": "^1.4.0",
     "yorkie": "^2.0.0"
   },
