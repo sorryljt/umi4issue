@@ -35,7 +35,7 @@ export default defineConfig({
   },
   ignoreMomentLocale: true,
   proxy: proxy['dev'],
-  // // 开启webpack5 模块联邦，提高构建速度,此功能默认开
+  // 开启webpack5 模块联邦，提高构建速度,此功能默认开
   // mfsu: {
   //   esbuild: true
   // },

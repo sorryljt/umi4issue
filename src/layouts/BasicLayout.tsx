@@ -53,7 +53,7 @@ class BasicLayout extends React.PureComponent<BasicLayoutProps, BasicLayoutState
           :
           <div className={styles.basicLayout}>
             <div className={styles.content}>
-              {Outlet}
+              <Outlet/>
             </div>
           </div>
         }
